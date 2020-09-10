@@ -20,7 +20,7 @@ const Navbar = () => {
     const mobileNavOpen = () => {
         symbol.classList.add('change');
         symbol.children[1].classList.remove('spin');
-        mobileMenu.classList.toggle('deployed');
+        mobileMenu.classList.add('deployed');
         overlay.classList.add('active');
         body.style.overflowY = 'hidden';
         body.parentElement.style.overflowY = 'hidden';
@@ -32,7 +32,7 @@ const Navbar = () => {
             symbol.classList.remove('change')
         }, 850);
         symbol.children[1].classList.add('spin');
-        mobileMenu.classList.toggle('deployed');
+        mobileMenu.classList.remove('deployed');
         mobileMenu.style.transitionDelay = '450ms';
         overlay.classList.remove('active');
         overlay.style.transitionDelay = '450ms';
@@ -44,7 +44,7 @@ const Navbar = () => {
         let allMobileMenuItems = [...mobileMenu.children[0].children].concat(mobileMenu.children[1]);
 
         allMobileMenuItems.forEach(link => link.addEventListener('click', () => {
-            mobileNavClose();
+            mobileNavClose()
         }))
     }
 
