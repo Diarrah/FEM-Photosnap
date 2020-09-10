@@ -1,0 +1,12 @@
+$colors: (
+    pure-black: hsl(0, 0%, 0%),
+    light-gray: hsl(0, 0%, 87%),
+    pure-white: hsl(0, 0%, 100%),
+    gradient-1--orange: hsl(28, 100%, 79%),
+    gradient-2--purple: hsl(329, 36%, 59%),
+    gradient-3--blue: hsl(229, 100%, 67%)
+);
+
+@function get-color($color) {
+	@return map-get($colors, $color);
+}

@@ -1,0 +1,17 @@
+.feature__card {
+    text-align: center;
+    position: relative;
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 90px;
+    }
+
+    &__textbox {
+        &--heading {
+            margin: 15px 0;
+        }
+    }
+}

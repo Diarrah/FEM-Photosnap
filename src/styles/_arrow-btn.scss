@@ -1,0 +1,55 @@
+.arrow--btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 0;
+    width: max-content;
+    font-size: 12px;
+
+    img {
+          width: 50px !important;
+          margin-left: 20px;
+          transition: 0.5s;
+     }
+
+     &.underline {
+          span {
+               position: relative;
+               letter-spacing: 1px;
+
+               &::after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    width: 0;
+                    transition: 0.1s;
+               }
+
+               &:hover::after {
+                    content: '';
+                    position: absolute;
+                    left: 0%; bottom: -2px;
+                    height: 1px; width: 100%;
+                    background-color: inherit;
+               }
+          }
+
+          &:hover {
+               img { transform: translateX(20px) } 
+          }
+
+          &.black {
+               span:hover::after { 
+                    background: rgba(get-color(pure-black), .6) 
+               }
+          }
+
+          &.white {
+               span:hover::after { 
+                    background: rgba(get-color(pure-white), .75) 
+               }
+          }
+     }
+}

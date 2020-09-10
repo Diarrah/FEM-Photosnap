@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+body {
+    max-width: 1900px;
+    margin: 0 auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+button {
+    background-color: transparent;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+@mixin rwd($screen) {
+    @media (max-width: $screen+'px') {
+        @content;
+    }
+}

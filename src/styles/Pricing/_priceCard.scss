@@ -1,0 +1,54 @@
+.price__card {
+    background-color: get-color(light-gray);
+    padding: 40px 30px;
+    text-align: center;
+
+    &--description {
+        margin-top: 20px;
+    }
+
+    &__textbox {
+        margin: 40px 0;
+
+        &--price {
+            letter-spacing: 5px;
+            font-weight: normal;
+        }
+    }
+
+    &--button {
+        display: block;
+        width: 100%;
+        text-transform: uppercase;
+        background-color: get-color(pure-black);
+        color: get-color(pure-white);
+        padding: 15px 0;
+        border: 0;
+        transition: .2s;
+        letter-spacing: 3px;
+
+        &:hover {
+            background-color: get-color(light-gray);
+            color: get-color(pure-black);
+            filter: brightness(.8);
+        }
+
+        &:active {
+            transform: scale(0.985);
+        }
+    }
+
+    &:nth-of-type(2) {
+        background-color: get-color(pure-black);
+        color: get-color(pure-white);
+
+        .price__card--description {
+            color: get-color(light-gray);            
+        }
+
+        button {
+            background-color: get-color(pure-white);
+            color: get-color(pure-black);
+        }
+    }
+}

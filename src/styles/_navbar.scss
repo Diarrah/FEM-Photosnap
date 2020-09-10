@@ -1,0 +1,157 @@
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 8vw;
+    height: 70px;
+    padding: 10px 0;
+
+    &__links {
+        display: flex;
+        width: 300px;
+
+        ul.page__links__container {
+            li {
+                &:nth-of-type(1) { display: none }
+            
+                a {
+                    position: relative;
+                    transition: .25s;
+
+                    &:hover {
+                        color: rgba(get-color(pure-black), .3);
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 10%; bottom: -5px;
+                            height: 1px; width: 80%;
+                            background: rgba(get-color(pure-black), .6);
+                        }
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        width: 0;
+                        transition: 0.25s;
+                    }
+                }
+            }
+        }
+
+        @include rwd(850) {
+            width: 230px;
+        }
+    }
+
+    .arrow--btn {
+        display: flex;
+        height: 100%;
+        letter-spacing: 2px;
+        background-color: get-color(pure-black);
+        color: get-color(pure-white);
+
+        span { padding: 0 20px }
+        img { display: none }
+
+        &:hover {
+            background-color: get-color(light-gray);
+            color: get-color(pure-black);
+        }
+
+        &:active {
+            transform: scale(0.98);
+        }
+    }
+
+    &__mobile__btn, &__mobile__menu, .overlay { display: none }
+
+    @include rwd(710) {
+        &__links, .arrow--btn {
+            display: none;
+        }
+
+        &__mobile__btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            height: 45px; width: 45px;
+            border-radius: 50%;
+            transition: .25s;
+
+            & > * { padding: 20px }
+
+            &--close { display: none }
+
+            &:hover {
+                background-color: get-color(light-gray);
+            }
+
+            &.change {
+                .navbar__mobile__btn--close { display: block }
+                .navbar__mobile__btn--open { display: none }
+            }
+
+            &--close {
+                &.spin {
+                    transform: rotateZ(360deg);
+                    transition: transform .85s;
+                }
+            }
+        }
+
+        &__mobile__menu {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            top: 100%; left: -8vw;
+            width: calc(100% + 16vw);
+            background-color: get-color(pure-white);
+            padding: 35px 15px;
+            transform: translateY(calc(-100% - 75px));
+            transition: .70s ease-in-out;
+            z-index: 5;
+
+            ul.page__links__container {
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 20px;
+                border-bottom: 2px solid get-color(light-gray);
+
+                li {
+                    &:first-of-type { display: none }
+                    margin-bottom: 25px;
+                    &:last-of-type { margin-bottom: 0 }
+                }
+            }
+
+            .arrow--btn {
+                display: flex;
+                margin-top: 20px;
+                width: 100%; height: 50px;
+                justify-content: center;
+            }
+
+            &.deployed {
+                transform: translateY(0);
+            }
+        }
+
+        .overlay {
+            display: flex;
+            position: absolute;
+            top: 100%; left: -8vw;
+            width: calc(100% + 16vw); height: 102vh;
+            background-color: rgba(get-color(pure-black), .75);
+            transform: translateX(105%);
+            transition: .55s;
+            z-index: 3;
+
+            &.active { transform: translateX(0%) }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.stories {
+    &__hero {
+        position: relative;
+        align-items: center;
+        display: flex;
+
+        &--backdrop {
+            max-width: 100%; width: 100%;
+        }
+
+        &__textbox {
+            position: absolute;
+            color: get-color(pure-white);
+            width: 30%;
+            margin-left: 10%;
+            z-index: 2;
+
+            span { font-size: 13px }
+
+            &--featured {
+                text-transform: uppercase;
+                letter-spacing: 4px;
+            }
+
+            &--heading {
+                margin: 30px 0 15px;
+                font-size: 3em;
+
+                @include rwd(550) {
+                    font-size: 2.25em;
+                }
+            }
+
+            &--date {
+                color: get-color(light-gray);
+                margin-right: 10px;
+            }
+
+            &--synopsis {
+                margin: 20px 0;
+                color: get-color(light-gray);
+            }
+
+            .arrow--btn {
+                color: get-color(pure-white);
+            }
+
+            @include rwd(1200) {
+                width: 55%;
+
+                &--heading {
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        @include rwd(620) {
+            flex-direction: column;
+
+            &--backdrop {
+                max-height: 400px;
+                object-fit: cover;
+            }
+
+            &__textbox {
+                position: relative;
+                background-color: get-color(pure-black);
+                width: 100%;
+                margin-left: 0;
+                padding: 50px 25px;
+
+                &--heading {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        @include rwd(850) {
+            grid-template-columns: repeat(2, 1fr);
+
+            .story__thumbnail {
+                max-height: 400px;
+
+                img { object-fit: cover }
+            }
+        }
+
+        @include rwd(550) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

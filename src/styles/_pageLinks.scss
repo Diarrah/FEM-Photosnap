@@ -1,0 +1,12 @@
+.page__links__container {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 100% !important;
+    
+    li {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 12px;
+    }
+}

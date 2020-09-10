@@ -1,0 +1,66 @@
+.cta {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__backdrop {
+        width: 100%; max-width: 100%;
+    }
+
+    &__textbox {
+        color: get-color(pure-white);
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;        
+        z-index: 2;
+        width: calc(100% - 16vw);
+
+        &--heading {
+            font-weight: normal;
+            max-width: 40%;
+
+            @include rwd(800) {
+                max-width: 55%;
+            }
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 100%; width: 5px;
+        left: 0;
+        background: linear-gradient(to bottom, get-color(gradient-1--orange), get-color(gradient-2--purple), get-color(gradient-3--blue));
+    }
+
+    @include rwd(600) {
+        max-height: 350px;
+        overflow: hidden;
+
+        &__textbox {    
+            flex-direction: column;
+            
+            &--heading {
+                max-width: 100%;
+                margin-bottom: 20px;
+
+                @include rwd(400) {
+                    font-size: 26px;
+                }
+            }
+
+            .arrow--btn {
+                align-self: flex-start;
+                margin-left: 50px;
+            }
+        }
+
+        &::before {
+            height: 5px; width: 200px;
+            top: 0; left: 8vw;
+            background: linear-gradient(to right, get-color(gradient-1--orange), get-color(gradient-2--purple), get-color(gradient-3--blue));
+        }
+    }
+}

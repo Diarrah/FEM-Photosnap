@@ -1,0 +1,26 @@
+.stories__preview__bar {
+    display: flex;
+
+    .story__thumbnail {
+        width: calc(100% / 4);
+    }
+
+    @include rwd(900) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .story__thumbnail {
+            width: 100%;
+            max-height: 350px;
+
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+
+    @include rwd(550) {
+        display: flex;
+        flex-direction: column;
+    }
+}
