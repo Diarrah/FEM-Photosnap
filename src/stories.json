@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "title": "Hazy Full Moon of Appalacia",
+        "author": "John Appleseed",
+        "date": "March 2nd 2020",
+        "subheading": "The dissected plateau area, while not actually made up of geological mountains, is popularly called \"mountains,\" especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.",
+        "illustration": "moon-of-appalacia.jpg"
+    },
+    {
+        "id": 2,
+        "title": "The Mountains",
+        "author": "John Appleseed",
+        "date": "April 16th 2020",
+        "illustration": "mountains.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Sunset Cityscapes",
+        "author": "Benjamin Cruz",
+        "date": "April 14th 2020",
+        "illustration": "cityscapes.jpg"
+    },
+    {
+        "id": 4,
+        "title": "18 Days Voyage",
+        "author": "Alexei Borodin",
+        "date": "April 11th 2020",
+        "illustration": "18-days-voyage.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Architecturals",
+        "author": "Samantha Brooke",
+        "date": "April 9th 2020",
+        "illustration": "architecturals.jpg"
+    },
+    {
+        "id": 6,
+        "title": "World Tour 2019",
+        "author": "Timothy Wagner",
+        "date": "April 7th 2020",
+        "illustration": "world-tour.jpg"
+    },
+    {
+        "id": 7,
+        "title": "Unforeseen Corners",
+        "author": "William Wagner",
+        "date": "April 3rd 2020",
+        "illustration": "unforeseen-corners.jpg"
+    },
+    {
+        "id": 8,
+        "title": "King on Africa: Part II",
+        "author": "Tim Hillenburg",
+        "date": "March 29th 2020",
+        "illustration": "king-on-africa.jpg"
+    },
+    {
+        "id": 9,
+        "title": "The Trip to Nowhere",
+        "author": "Felicia Rourke",
+        "date": "March 21st 2020",
+        "illustration": "trip-to-nowhere.jpg"
+    },
+    {
+        "id": 10,
+        "title": "Rage of The Sea",
+        "author": "Mohammed Abdul",
+        "date": "March 19th 2020",
+        "illustration": "rage-of-the-sea.jpg"
+    },
+    {
+        "id": 11,
+        "title": "Running Free",
+        "author": "Michelle",
+        "date": "March 16th 2020",
+        "illustration": "running-free.jpg"
+    },
+    {
+        "id": 12,
+        "title": "Behind the Waves",
+        "author": "Lamarr Wilson",
+        "date": "March 11th 2020",
+        "illustration": "behind-the-waves.jpg"
+    },
+    {
+        "id": 13,
+        "title": "Calm Waters",
+        "author": "Samantha Brooke",
+        "date": "March 11th 2020",
+        "illustration": "calm-waters.jpg"
+    },
+    {
+        "id": 14,
+        "title": "The Milky Way",
+        "author": "Benjamin Cruz",
+        "date": "March 5th 2020",
+        "illustration": "milky-way.jpg"
+    },
+    {
+        "id": 15,
+        "title": "Night at The Dark Forest",
+        "author": "Mohammed Abdul",
+        "date": "March 4th 2020",
+        "illustration": "dark-forest.jpg"
+    },
+    {
+        "id": 16,
+        "title": "Somwarpet’s Beauty",
+        "author": "Michelle",
+        "date": "March 1st 2020",
+        "illustration": "somwarpet.jpg"
+    },
+    {
+        "id": 17,
+        "title": "Land of Dreams",
+        "author": "William Malcolm",
+        "date": "February 25th 2020",
+        "illustration": "land-of-dreams.jpg"
+    }
+]
