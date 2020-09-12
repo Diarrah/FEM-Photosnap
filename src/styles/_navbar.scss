@@ -114,6 +114,7 @@
             padding: 35px 15px;
             transform: translateY(calc(-100% - 75px));
             transition: .70s ease-in-out;
+            transition-delay: 450ms;
             z-index: 5;
 
             ul.page__links__container {
@@ -138,6 +139,7 @@
 
             &.deployed {
                 transform: translateY(0);
+                transition-delay: 0ms;
             }
         }
 
@@ -149,9 +151,13 @@
             background-color: rgba(get-color(pure-black), .75);
             transform: translateX(105%);
             transition: .55s;
+            transition-delay: 450ms;
             z-index: 3;
 
-            &.active { transform: translateX(0%) }
+            &.active { 
+                transform: translateX(0%);
+                transition-delay: 0ms;
+            }
         }
     }
 }
