@@ -8,7 +8,11 @@ const PricingToggle = () => {
         <div className="price__section">
             <div className="price__section__toggle">
                 <span>Monthly</span>
-                <button className={`price__section__toggle--button ${!monthly ? "active" : ''}`} onClick={() => setMonthly(!monthly)}>
+                <button 
+                    className={`price__section__toggle--button ${!monthly ? "active" : ''}`} 
+                    aria-label="Button to toggle subscription price from monthly to annual"
+                    onClick={() => setMonthly(!monthly)}
+                >
                     <span className="slider" />
                 </button>
                 <span>Annually</span>
