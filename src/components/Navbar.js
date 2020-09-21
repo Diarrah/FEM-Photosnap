@@ -33,14 +33,18 @@ const Navbar = () => {
             menuChildren = [...menu.children[0].children].concat(menu.children[1]);
 
         menuChildren.forEach(child => child.addEventListener('click', () => {
-            setMenuOpen(false);
-            mobileNavClose();
+            closeAll();
         }));
+    }
+
+    const closeAll = () => {
+        setMenuOpen(false);
+        mobileNavClose();
     }
 
     return (
         <div className="navbar">
-            <Link to="/" onClick={() => setMenuOpen(false)}>
+            <Link to="/" onClick={() => closeAll()}>
                 <img className="navbar__logo" src={logo} alt="Photosnap company logo" />
             </Link>
             <div className="navbar__links">
